@@ -1,0 +1,36 @@
+@import './variables';
+
+.hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: $secondary;
+}
+
+.hero > .hero__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero > .hero__content > .hero__text {
+    width: 50%;
+}
+
+.hero > .hero__content > .hero__image {
+    width: 50%;
+}
+
+.hero > .hero__content > .hero__text > h6 {
+    font-size: 25px;
+    margin: 0;
+}
+
+.hero > .hero__content > .hero__text > h1 {
+    font-size: 60px;
+}
+
+.hero > .hero__content > .hero__image > img {
+    height: 500px;
+    width: 500px;
+    border-radius: 20%;
+}

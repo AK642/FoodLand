@@ -1,0 +1,30 @@
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.root {
+    padding: 3px 4px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    background-color: lightgrey;
+    border-radius: 50px;
+}
+ 
+.input {
+    margin-left: 10px;
+    flex: 1;
+}
+  
+.MuiIconButton-root {
+    // padding: 5px;
+    
+    display: flex;
+    color: #535353;
+}
+
+.button {
+    background-color: black;
+}
