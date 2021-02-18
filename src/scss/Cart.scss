@@ -1,0 +1,156 @@
+@import './variables';
+
+.cart {
+    background: $secondary;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.empty__cart {
+    text-align: center;
+}
+
+.empty__cart > h1 {
+    margin-top: 0;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.empty__cart > p {
+    color: $gray;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.empty__cart > img {
+    width: 35%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.empty__cart > .button {
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+    box-shadow: 2px -3px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.order {
+    width: 50%;
+    margin: auto;
+}
+
+.order > .order__title {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid $gray;
+}
+
+.order > .order__title > .MuiSvgIcon-root {
+    font-size:xx-large;
+    padding-top: 15px;
+}
+
+.order > .order__title > h1 {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.order > .item__list {
+    border-bottom: 3px solid $gray;
+}
+
+.order > .item__list > .item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.order > .item__list > .item > img {
+    width: 20%;
+}
+
+.order > .item__list > .item > .item__details {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.order > .item__list > .item > .item__details > .item__name {
+    margin: 0;
+    font-size: 25px;
+}
+
+.order > .item__list > .item > .item__details > .item__size {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.order > .item__list > .item > .item__quantity {
+    flex-grow: 1;
+}
+
+.order > .item__list > .item > .item__price {
+    font-weight: bold;
+}
+
+.order > .bill__details {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.order > .bill__details > .bill__amount {
+    margin-bottom: 40px;
+}
+
+.order > .bill__details > .bill__amount > .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.order > .bill__details > .bill__amount > .total__amount {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    color: $primary;
+}
+
+.order > .bill__details > .shipping__details > form > input {
+    border: 2px solid $gray;
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.order > .bill__details > a,
+.order > .bill__details > .shipping__details > form > .submit__button > .button {
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.order > .bill__details > a {
+    display: inline-block;
+    text-decoration: none;
+}

@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Button, Container } from '@material-ui/core';
 import React from 'react';
 import './scss/Hero.scss';
 
@@ -11,6 +11,9 @@ function Hero() {
                 <div className="hero__text">
                     <h6><em>Are you hungry?</em></h6>
                     <h1>Don't wait !</h1>
+                    <Button className="button">
+                        Order Now
+                    </Button>
                 </div>
                 <div className="hero__image">
                     <img src={HeroImage} alt="Food"></img>

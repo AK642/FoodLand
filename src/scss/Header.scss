@@ -31,16 +31,17 @@
     }
 }
 
-.header > .container > nav > .nav__links > ul > li:last-child > a {
+.header > .container > nav > .nav__links > ul > li > .cart__icon {
     background-color: $primary;
     color: $pure;
-    padding: 10px 10px 10px 25px;
+    padding: 3px 7px 3px 25px;
     display: flex;
     justify-content: right;
     border-radius: 50px;
 
     &:hover {
         background-color: $primary-hover;
+        color: $pure;
     }
 }
 
