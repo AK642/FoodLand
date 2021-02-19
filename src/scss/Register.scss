@@ -1,1 +1,79 @@
 @import './variables';
+
+.register {
+    padding-top: 50px;
+    background: $secondary;
+    height: calc(100vh - 104px);
+}
+
+.register > .register__title {
+    display: flex;
+    justify-content: center;
+}
+
+.register > .register__title > h1 {
+    color: $primary;
+}
+
+.register > .register__form {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.register > .register__form > form {
+    padding: 25px 30px;
+    box-shadow: 0px 0px 10px $gray;
+    width: 20%;
+    background: $pure;
+    // width: fit-content;
+}
+
+.register > .register__form > form > .label {
+    margin-bottom: 5px;
+}
+
+.register > .register__form > form > .label > label {
+    font-weight: bold;
+}
+
+.register > .register__form > form > input {
+    border: 2px solid $gray;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 94%;
+}
+
+.register > .register__form > form > .button__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.register > .register__form > form > .button__link > .button {
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.register > .register__form > form > .button__link > a {
+    text-decoration: none;
+    color: $primary;
+    font-weight: bold;
+    &:hover {
+        color: $primary-hover;
+    }
+}
+
+.register > .copyrights {
+    text-align: center;
+    color: $gray;
+}
