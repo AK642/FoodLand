@@ -21,28 +21,37 @@
     margin-left: 50px;
 }
 
-.header > .container > nav > .nav__links > ul > li > a{
+.header > .container > nav > .nav__links > ul > li > .link,
+.header > .container > nav > .nav__links > ul > li > .link > a{
     transition: $smooth;
     text-decoration: none;
     color: $dark;
-
+    -webkit-any-link: no;
     &:hover {
         color: $primary;
     }
 }
 
-.header > .container > nav > .nav__links > ul > li > .cart__icon {
+.header > .container > nav > .nav__links > ul > li > .cart__link{
+    text-decoration: none;
+}
+.header > .container > nav > .nav__links > ul > li > .cart__link > .cart__icon {
     background-color: $primary;
     color: $pure;
-    padding: 3px 7px 3px 25px;
+    padding: 3px 7px 3px 15px;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     border-radius: 50px;
+    text-decoration: none;
 
     &:hover {
         background-color: $primary-hover;
         color: $pure;
     }
+}
+
+.header > .container > nav > .nav__links > ul > li > .cart__link > .cart__icon > .cart__length {
+    margin-right: 5px;
 }
 
 

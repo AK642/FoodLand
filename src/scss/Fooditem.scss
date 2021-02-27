@@ -1,0 +1,67 @@
+@import './variables';
+
+.fooditem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fooditem > .card {
+    width: 16rem;
+    text-align: center;
+    margin: 10px 25px 50px 25px;
+}
+
+.fooditem > .card > .item__image {
+    display: flex;
+    justify-content: center;
+}
+
+.fooditem > .card > .item__image > img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.fooditem > .card > .item__details > h2 {
+    margin-bottom: 5px;
+}
+
+.fooditem > .card > .item__details > .size {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: $secondary;
+    font-size: 12px;
+}
+
+.fooditem > .card > .item__details > .item__price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: $secondary;
+}
+
+.fooditem > .card > .item__details > .item__price > .price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fooditem > .card > .item__details > .item__price > .add_to_cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 3px 8px;
+
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}

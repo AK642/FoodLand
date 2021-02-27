@@ -1,0 +1,108 @@
+@import './variables';
+
+.cartitem > .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cartitem > .item > .description {
+    display: flex;
+    align-items: center;
+}
+
+.cartitem > .item > .description > img {
+    width: 20%;
+}
+
+.cartitem > .item > .description > .item__details {
+    margin-left: 20px;
+    // flex-grow: 1;
+    width: fit-content;
+}
+
+.cartitem > .item > .description > .item__details > .item__name {
+    margin: 0;
+    font-size: 25px;
+}
+
+.cartitem > .item > .description > .item__details > .item__size {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+// .cartitem > .item > .button__price {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.cartitem > .item > .remove {
+    font-weight: bold;
+    margin-right: 80px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.cartitem > .item > .item__price {
+    font-weight: bold;
+}
+
+.order > .bill__details {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.order > .bill__details > .bill__amount {
+    margin-bottom: 40px;
+}
+
+.order > .bill__details > .bill__amount > .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.order > .bill__details > .bill__amount > .total__amount {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    color: $primary;
+}
+
+.order > .bill__details > .shipping__details > form > input {
+    border: 2px solid $gray;
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.order > .bill__details > a,
+.order > .bill__details > .shipping__details > form > .submit__button > .button {
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.order > .bill__details > a {
+    display: inline-block;
+    text-decoration: none;
+}

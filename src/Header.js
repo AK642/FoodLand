@@ -10,9 +10,11 @@ import {Link} from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import BookIcon from '@material-ui/icons/Book';
+import { useStateValue } from './StateProvider';
 
 
 function Header() {
+    const [{basket}, dispatch] = useStateValue()
     return (
         <div className="header">
             <Container maxWidth="lg" className="container">
@@ -22,12 +24,12 @@ function Header() {
                     </div>
                     <div className="nav__links">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Offers</a></li>
-                            <li><a href="/register">Register</a></li>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="/cart" className="cart__icon"><ShoppingCartIcon /></a></li>
+                            <li><Link to="/" className="link"><a href="#">Home</a></Link></li>
+                            <li><Link to="/menu" className="link"><a href="#">Menu</a></Link></li>
+                            <li><Link to="/offers" className="link"><a href="#">Offers</a></Link></li>
+                            <li><Link to="/register" className="link"><a href="/register">Register</a></Link></li>
+                            <li><Link to="/login" className="link"><a href="/login">Login</a></Link></li>
+                            <li><Link to="/cart" className="cart__link"><a href="#" className="cart__icon"><span className="cart__length">{basket?.length==0 ? '' : basket?.length}</span><ShoppingCartIcon /></a></Link></li>
                         </ul>
                     </div>
                 </nav>

@@ -1,0 +1,51 @@
+@import './variables';
+
+.cartForm > .bill__details {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cartForm > .bill__details > .bill__amount {
+    margin-bottom: 40px;
+}
+
+.cartForm > .bill__details > .bill__amount > .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cartForm > .bill__details > .bill__amount > .total__amount {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    color: $primary;
+}
+
+.cartForm > .bill__details > .shipping__details > form > input {
+    border: 2px solid $gray;
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cartForm > .bill__details > a,
+.cartForm > .bill__details > .shipping__details > form > .submit__button > .button {
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.cartForm > .bill__details > a {
+    display: inline-block;
+    text-decoration: none;
+}
