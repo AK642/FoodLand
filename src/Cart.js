@@ -38,10 +38,6 @@ function Cart() {
                     </div>
                 </Container>
             }
-                
-            
-            
-            
         </div>
     )
 }

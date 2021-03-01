@@ -1,0 +1,17 @@
+@import './variables';
+
+.foodViewBottom {
+    border-bottom: 3px solid $gray;
+}
+
+.foodViewBottom > h2 {
+    margin-bottom: 0px;
+}
+
+.foodViewBottom > p {
+    margin: 5px 0px;
+}
+
+.foodViewBottom > h4 {
+    margin: 10px 0px;
+}

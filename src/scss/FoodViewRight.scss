@@ -1,0 +1,55 @@
+@import './variables';
+
+.foodViewRight > h2 {
+    font-size: 30px;
+    margin: 0px;
+    color: $dark;
+}
+
+.foodViewRight > h1 {
+    // text-align: center;
+    color: $primary;
+    // margin: 0px;
+}
+
+.foodViewRight > p {
+    color: $gray;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.foodViewRight > form > .submit__button > .button,
+.foodViewRight > .button {
+    border-radius: 20px;
+    padding: 7px 15px;
+    box-shadow: 0px 2px 2px $gray;
+    color: $pure;
+    background: $primary;
+    transition: $smooth;
+
+    &:disabled,
+    &:hover {
+        background: $primary-hover;
+    }
+
+}
+
+.foodViewRight > form {
+    padding: 30px 0px;
+}
+
+.foodViewRight > form > .label {
+    margin-bottom: 10px;
+}
+
+.foodViewRight > form > .label > label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.foodViewRight > form > input {
+    border: 2px solid $gray;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 50%;
+}

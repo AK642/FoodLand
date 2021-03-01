@@ -1,13 +1,12 @@
 import { Container } from '@material-ui/core';
 import React, {useEffect, useState} from 'react';
 import './scss/Menu.scss';
-import db from './firebase';
+import { db } from './firebase';
 import Fooditem from './Fooditem';
 
 function Menu() {
 
     const [items, setItems] = useState([]);
-
     useEffect(() => {
         db.collection("FoodItems").onSnapshot(snapshot => {
             setItems(snapshot.docs.map(doc => doc.data()));

@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import './scss/Fooditem.scss';
 import { useStateValue } from './StateProvider';
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 function Fooditem({id, image, name, detail, price}) {
 
-    const [{ basket }, dispatch] = useStateValue()
-
-    console.log("BASKET",basket);
+    const [{ basket, view }, dispatch] = useStateValue()
 
     const addToBasket = () => {
         dispatch({
@@ -23,11 +22,24 @@ function Fooditem({id, image, name, detail, price}) {
         })
     }
 
+    const viewDetail = () => {
+        dispatch({
+            type: "VIEW_DETAIL",
+            item: {
+                id: id,
+                image: image,
+                name: name,
+                detail: detail,
+                price: price
+            }
+        })
+    }
+
     return (
         <div className="fooditem">                
             <div className="card">
                 <div className="item__image">
-                    <img src={image} alt="tomato-pizza"></img>    
+                    <Link to="/food" onClick={viewDetail} className="image__link"><img src={image} alt="Food Image"></img></Link>    
                 </div> 
                 <div className="item__details">
                     <h2>{name}</h2>

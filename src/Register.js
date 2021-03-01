@@ -1,8 +1,28 @@
 import { Button } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import './scss/Register.scss';
+import {useHistory} from 'react-router-dom';
+import { auth } from "./firebase";
 
 function Register() {
+
+    // const [name, setName] = useState('');
+    const history = useHistory()
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const registration = e => {
+        e.preventDefault();
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                // console.log(auth);
+                if(auth) {
+                    history.push('/')
+                }
+            })
+            .catch(error => alert(error.message));
+    }
+
     return (
         <div className="register">
             <div className="register__title">
@@ -13,17 +33,17 @@ function Register() {
                     <div className="label">
                         <label for="name">Name</label>
                     </div>
-                    <input type="text" name="name" id="name" placeholder="Name"></input>
+                    <input type="text" placeholder="Name"></input>
                     <div className="label">
                         <label for="email">Email</label>
                     </div>
-                    <input type="email" name="email" id="email" placeholder="Email"></input>
+                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email"></input>
                     <div className="label">
                         <label for="password">Password</label>
                     </div>
-                    <input type="password" name="password" id="password" placeholder="Password"></input>
+                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password"></input>
                     <div className="button__link">
-                        <Button className="button" type="submit">
+                        <Button className="button" type="submit" onClick={registration}>
                             Register
                         </Button>
                         <a href="/login">Already have account?</a>

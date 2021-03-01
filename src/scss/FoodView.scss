@@ -1,0 +1,56 @@
+@import './variables';
+
+.foodView {
+    padding-top: 30px;
+    background: $secondary;
+}
+
+.foodView > .foodView__container > .food__detail {
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 3px solid $gray;
+    // align-items: center;
+}
+
+.foodView > .foodView__container > .food__detail > .food__image {
+    box-shadow: 2px -2px 3px $gray;
+    transition: $smooth;
+    border-radius: 20px;
+    border: none;
+
+    &:hover {
+        transform: translateX(25px);
+        transition: $smooth;
+        // transform: translateY(-2px);
+    }
+
+}
+
+.foodView > .foodView__container > .food__detail > .detail {
+    width: 100%;
+    padding-left: 100px;
+}
+
+.foodView > .foodView__container > .food__review > h1 {
+    margin: 0px;
+    color: $primary;
+    border-bottom: 3px solid $gray;
+}
+
+.foodView > .foodView__container > .food__review > h3 {
+    margin: 20px 0px;
+    color: $positive;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 3px solid $positive;
+    width: 50%;
+}   
+
+.foodView > .foodView__container > .food__review > h6 {
+    margin: 20px 0px;    
+    color: $negative;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 3px solid $negative;
+    width: 50%;
+}
